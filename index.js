@@ -77,11 +77,11 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(array){
-   //   const smallAnimals = [];
+  //    const smallAnimals = [];
 
-  //   array.map((element) => {
-  //     smallAnimals.toLowerCase(`${element.animal_name}`);
-  //     console.log(element.animal_name);
+  //   array.map((item) => {
+  //     return item.toLowerCase(`${item.animal_name}`);
+  //     console.log(item.animal_name);
   //   });
   //   return smallAnimals
   }
@@ -183,7 +183,7 @@ CuboidMaker.prototype.volume = function() {
   2 * (length * width + length * height + width * height)  */
 
 CuboidMaker.prototype.surfaceArea = function(){
-  2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
+  return 2 * (this.length * this.width) + 2 * (this.length * this.height) + 2 * (this.width * this.height);
 }
 
 
@@ -218,7 +218,7 @@ class CuboidMakerTwo{
     return this.length * this.width * this.height;
   }
   surfaceArea(){
-    2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
+    return 2 * (this.length * this.width) + 2 * (this.length * this.height) + 2 * (this.width * this.height);
   }
 }
 
@@ -233,7 +233,11 @@ class CuboidMakerTwo{
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
+class CubeMaker extends CuboidMaker{
+  constructor(prop){
+    super.prop;
+  }
+}
 
 
 
